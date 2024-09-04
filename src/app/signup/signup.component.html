@@ -1,1 +1,50 @@
-<p>signup works!</p>
+<!--src/app/signup/signup.component.html-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <form #form="ngForm" (ngSubmit)="signup(form.value)">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input placeholder="Email"
+                 class="form-control"
+                 id="email"
+                 name="email"
+                 type="text"
+                 [(ngModel)]="user.email">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input placeholder="Password"
+                 class="form-control"
+                 id="password"
+                 name="password"
+                 type="password"
+                 [(ngModel)]="user.password">
+        </div>
+          <div class="form-group">
+            <label for="password">UserName</label>
+            <input placeholder="UserName"
+                   class="form-control"
+                   id="userName"
+                   name="userName"
+                   type="text"
+                   [(ngModel)]="user.userName">
+          </div>
+        <div class="form-group">
+          <label for="password">Role</label>
+          <input placeholder="Role"
+                 class="form-control"
+                 id="role"
+                 name="role"
+                 type="text"
+                 [(ngModel)]="user.role">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-default" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
